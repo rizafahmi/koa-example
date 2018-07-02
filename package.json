@@ -1,0 +1,11 @@
+{
+  "name": "koa-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Riza Fahmi <rizafahmi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0"
+  }
+}
