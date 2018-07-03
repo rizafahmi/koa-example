@@ -4,9 +4,15 @@
   "main": "index.js",
   "author": "Riza Fahmi <rizafahmi@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
   "dependencies": {
+    "jsonwebtoken": "^8.3.0",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
+    "koa-jwt": "^3.3.2",
     "koa-logger": "^3.2.0",
     "koa-router": "^7.4.0",
     "mongodb": "^3.1.0"
