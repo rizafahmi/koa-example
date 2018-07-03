@@ -44,8 +44,7 @@ router.post('/auth', async (context) => {
 });
 
 securedRouter.get('/people', async (context) => {
-  // console.log(context.people.find);
-  context.body = await context.people.find().toArray();
+  context.body = await context.people.find();
   // console.log(context.app.people);
 });
 securedRouter.post('/people', async (context) => {
@@ -57,13 +56,13 @@ securedRouter.get('/people/:id', async (context) => {
   });
 });
 securedRouter.put('/people/:id', async (context) => {
-  context.body = await context.people.replaceOne(
+  context.body = await context.people.update(
     { _id: ObjectId(context.params.id) },
     context.request.body,
   );
 });
 securedRouter.delete('/people/:id', async (context) => {
-  context.body = await context.people.deleteOne({
+  context.body = await context.people.remove({
     _id: ObjectId(context.params.id),
   });
 });
